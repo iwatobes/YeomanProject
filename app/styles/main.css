@@ -7,7 +7,7 @@ body {
 	line-height: 1.231;
 }
 
-.wrapper {
+.container {
   font-size : 18px;
   font-family :"Gentium Book Basic",serif;
   width:960px;
@@ -121,4 +121,44 @@ nav ul, nav ol {
   list-style-image: none;
   
   padding: 0;
+}
+
+@media all
+and (max-width : 767px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		display: none;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		display: inline-block;
+		width: 100%;
+		line-height: 12px !important;
+		padding: 6px 0px !important;
+		border-top: none !important;
+	}
+	body {
+		width: 100%;
+		padding: 0px;
+	}
+	
+	.container {
+		  width: 100%;
+		}
+	
+	.header {
+		padding: 0px;
+	}
+	.content {
+		padding: 0px;
+	}
 }
