@@ -16,6 +16,6 @@ angular.module('YeomanProjectApp', [])
         controller: 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '404.html'
       });
   });
