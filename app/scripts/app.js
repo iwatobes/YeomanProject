@@ -1,21 +1,21 @@
 'use strict';
 
 angular.module('YeomanProjectApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($routeProvider,$locationProvider) {
+    $routeProvider.when('/', {
         templateUrl: 'views/Home.html',
         controller: 'MainCtrl'
       })
-	  .when('/home', {
+	  $routeProvider.when('/home', {
         templateUrl: 'views/Home.html',
         controller: 'MainCtrl'
       })
-	  .when('/about', {
+	  $routeProvider.when('/about', {
         templateUrl: 'views/About.html',
         controller: 'MainCtrl'
       })
-      .otherwise({
+      $routeProvider.otherwise({
         redirectTo: '404.html'
       });
+	  $locationProvider.html5Mode(true);
   });
