@@ -17,5 +17,6 @@ angular.module('YeomanProjectApp', [])
       $routeProvider.otherwise({
         redirectTo: '404.html'
       });
-	  $locationProvider.html5Mode(true);
+	  //comment out because github hosting doesnt work well with angular HTML5. this require URL rewrite while github page are just static pages
+	  //$locationProvider.html5Mode(true);
   });
